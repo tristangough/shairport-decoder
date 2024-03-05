@@ -94,9 +94,12 @@ class Infos(object):
 
 	def write_cover_file(self):
 		temp_file = tempfile.NamedTemporaryFile(prefix="image_", suffix=".png", delete=False)
-		with temp_file as file:
-			file.write(self.songcoverart.binary)  # this is not base64!
-		return temp_file
+		if temp_file == None:
+			pass
+		else:
+			with temp_file as file:
+				file.write(self.songcoverart.binary)  # this is not base64!
+			return temp_file
 
 	def to_simple_string(self):
 		"""
@@ -106,6 +109,15 @@ class Infos(object):
 		:return:
 		"""
 		return (self.itemname if self.itemname else "Unknown Track") + ((" - " + self.songartist) if self.songartist else "") + (("\n" + self.songalbum) if self.songalbum else "")
+
+	def to_title(self):
+		return (self.itemname if self.itemname else "Unknown Track")
+		
+	def to_artist(self):
+		return (self.songartist if self.songartist else "")
+		
+	def to_album(self):
+		return (self.songalbum if self.songalbum else "")
 
 class CoverArt(object):
 	def __init__(self, base64=None, binary=None, mime=None, extension=None, checksum=None):
