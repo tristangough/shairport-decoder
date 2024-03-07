@@ -94,6 +94,7 @@ class Processor(object):
 				self.info.itemkind = item.data_int
 			elif item.code == "minm":  # -- dmap.itemname
 				self.info.itemname = item.data_str
+				self._trigger_update_event(META)
 			elif item.code == "mper":  # -- dmap.persistentid
 				self.info.persistentid = item.data_int
 			elif item.code == "miid":  # -- dmap.itemid
@@ -102,8 +103,10 @@ class Processor(object):
 
 			elif item.code == "asal":  # -- daap.songalbum
 				self.info.songalbum = item.data_str
+				self._trigger_update_event(META)
 			elif item.code == "asar":  # -- daap.songartist
 				self.info.songartist = item.data_str
+				self._trigger_update_event(META)
 			elif item.code == "ascm":  # -- daap.songcomment
 				self.info.songcomment = item.data_str
 			elif item.code == "asco":  # -- daap.songcompilation
