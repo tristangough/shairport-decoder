@@ -256,7 +256,6 @@ class Processor(object):
 
 # because py2 doesn't have Enums... :(
 VOLUME = "volume"
-USER = "user"
 META = "meta end"
 META_START = "meta start"
 COVERART = "coverart"
