@@ -233,7 +233,7 @@ class Processor(object):
 		:param function: Will be called when an update got received.
 		You function have to have 2 arguments:
 		```function(event_type, info)```
-		event_type: USER, META, VOLUME or COVERART
+		event_type: META, VOLUME or COVERART
 		info: The collected Metadata. Type is decode.Infos
 		"""
 		if not self._listeners or len(self._listeners) == 0:
@@ -255,7 +255,6 @@ class Processor(object):
 
 # because py2 doesn't have Enums... :(
 VOLUME = "volume"
-USER = "user"
 META = "meta end"
 META_START = "meta start"
 COVERART = "coverart"
