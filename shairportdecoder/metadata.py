@@ -121,7 +121,7 @@ class Infos(object):
 		return (self.songalbum if self.songalbum else "")
 
 	def to_user(self):
-		return (self.appleclient if self.songalbum else "")
+		return (self.appleclient if self.appleclient else "You are now connected")
 
 class CoverArt(object):
 	def __init__(self, base64=None, binary=None, mime=None, extension=None, checksum=None):
