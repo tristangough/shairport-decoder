@@ -49,7 +49,7 @@ class Processor(object):
 				self._trigger_update_event(COVERART)
 			elif item.code == "snam":  # -- daap.songalbum                     ******* ADDED FOR IPHONE NAME *******
 				self.info.appleclient = item.data_str
-				self._trigger_update_event(META)
+				self._trigger_update_event(USER)
 			elif item.code == "mdst":  # -- a sequence of metadata is about to start
 				self._trigger_update_event(META_START)
 				#
