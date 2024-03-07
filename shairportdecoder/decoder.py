@@ -50,6 +50,9 @@ class Processor(object):
 			elif item.code == "snam":  # -- daap.songalbum                     ******* ADDED FOR IPHONE NAME *******
 				self.info.appleclient = item.data_str
 				self._trigger_update_event(META)
+			elif item.code == "disc":  # -- daap.songalbum                     ******* ADDED FOR IPHONE NAME *******
+				self.info.disconnect = item.data_str
+				self._trigger_update_event(META)
 			elif item.code == "mdst":  # -- a sequence of metadata is about to start
 				self._trigger_update_event(META_START)
 				#
