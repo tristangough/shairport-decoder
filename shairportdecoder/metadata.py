@@ -113,7 +113,7 @@ class Infos(object):
 		return (self.itemname if self.itemname else "Unknown Track") + ((" - " + self.songartist) if self.songartist else "") + (("\n" + self.songalbum) if self.songalbum else "")
 
 	def to_title(self):
-		return (self.itemname if self.itemname else "Unknown Track")
+		return (self.itemname if self.itemname else "")
 		
 	def to_artist(self):
 		return (self.songartist if self.songartist else "")
