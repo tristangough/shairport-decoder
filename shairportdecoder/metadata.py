@@ -30,6 +30,7 @@ class Infos(object):
 
 	def __init__(self):
 		self.appleclient = None				# unicode, e.g. "Tristan's iPhone"
+		self.connect = None				# unicode, IP number
 		self.disconnect = None				# unicode, IP number
 		self.itemid = None  				# int
 		self.itemkind = None  				# int, so far only '2' has been seen, audio.
