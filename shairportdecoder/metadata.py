@@ -30,7 +30,8 @@ class Infos(object):
 
 	def __init__(self):
 		self.appleclient = None				# unicode, e.g. "Tristan's iPhone"
-		self.conndisc = None				# unicode, IP number
+		self.connect = None				# unicode, IP number
+		self.disconnect = None				# unicode, IP number
 		self.itemid = None  				# int
 		self.itemkind = None  				# int, so far only '2' has been seen, audio.
 		self.itemname = None  				# unicode, the actual song title, e.g. "Chapter 9"  -- Yes, I am using an audiobook to test. lol.
@@ -125,10 +126,10 @@ class Infos(object):
 		return (self.appleclient if self.appleclient else "Apple device")
 
 	def to_connect(self):
-		return (self.conndisc if self.appleclient else "Apple device")
+		return (self.connect)
 
 	def to_disconnect(self):
-		return False
+		return (self.disconnect)
 
 class CoverArt(object):
 	def __init__(self, base64=None, binary=None, mime=None, extension=None, checksum=None):
