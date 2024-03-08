@@ -23,17 +23,20 @@ class Processor(object):
 		logger.info("Parsing named pipe: {filename}".format(filename=filename))
 		temp_line = ""
 		while not (self.do_quit):
-			with open(filename) as f:
-				for line in f:
-					if not line.strip().endswith("</item>"):
-						temp_line += line.strip()
-						continue
-					line = temp_line + line
-					temp_line = ""
-					#print(line)
-					self.process_line(line)
-					if self.do_quit:
-						break
+			if filename == None:
+				pass
+			else:
+				with open(filename) as f:
+					for line in f:
+						if not line.strip().endswith("</item>"):
+							temp_line += line.strip()
+							continue
+						line = temp_line + line
+						temp_line = ""
+						#print(line)
+						self.process_line(line)
+						if self.do_quit:
+							break
 
 	def process_line(self, line):
 		item = Item(line)
