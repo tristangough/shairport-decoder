@@ -47,10 +47,13 @@ class Processor(object):
 			if item.code == "PICT":  # the payload is a picture, either a JPEG or a PNG. Check the first few bytes to see which.
 				self.info.songcoverart = CoverArt(binary=item.data, base64=item.data_base64)  # this is not base64, but raw.
 				self._trigger_update_event(COVERART)
-			elif item.code == "snam":  # -- daap.songalbum                     ******* ADDED FOR IPHONE NAME *******
+			elif item.code == "snam":  # -- daap.songalbum                     ******* ADDED FOR APPLE DEVICE NAME *******
 				self.info.appleclient = item.data_str
 				self._trigger_update_event(META)
-			elif item.code == "disc":  # -- daap.songalbum                     ******* ADDED FOR IPHONE NAME *******
+			elif item.code == "conn":  # -- daap.songalbum                     ******* ADDED FOR CONNECTION *******
+				self.info.connect = item.data_str
+				self._trigger_update_event(META)
+			elif item.code == "disc":  # -- daap.songalbum                     ******* ADDED FOR DISCONNECTION *******
 				self.info.disconnect = item.data_str
 				self._trigger_update_event(META)
 			elif item.code == "mdst":  # -- a sequence of metadata is about to start
