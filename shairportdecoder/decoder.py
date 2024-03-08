@@ -23,7 +23,7 @@ class Processor(object):
 		logger.info("Parsing named pipe: {filename}".format(filename=filename))
 		temp_line = ""
 		while not (self.do_quit):
-			if filename == None:
+			if os.path.exists(/tmp/shairport-sync-metadata) == False:
 				pass
 			else:
 				with open(filename) as f:
