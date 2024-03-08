@@ -52,10 +52,10 @@ class Processor(object):
 				self._trigger_update_event(META)
 			elif item.code == "conn":  # -- daap.songalbum                     ******* ADDED FOR CONNECTION *******
 				self.info.connect = item.data_str
-				self._trigger_update_event(META)
+				self._trigger_update_event(META_START)
 			elif item.code == "disc":  # -- daap.songalbum                     ******* ADDED FOR DISCONNECTION *******
 				self.info.disconnect = item.data_str
-				self._trigger_update_event(META)
+				self._trigger_update_event(META_START)
 			elif item.code == "mdst":  # -- a sequence of metadata is about to start
 				self._trigger_update_event(META_START)
 				#
