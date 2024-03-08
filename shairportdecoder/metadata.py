@@ -125,6 +125,12 @@ class Infos(object):
 	def to_user(self):
 		return (self.appleclient if self.appleclient else "Apple device")
 
+	def to_connect(self):
+		return (self.connect if self.connect else "")
+
+	def to_disconnect(self):
+		return (self.disconnect if self.disconnect else "")
+
 class CoverArt(object):
 	def __init__(self, base64=None, binary=None, mime=None, extension=None, checksum=None):
 		self._binary = binary  # the actual file bytes
