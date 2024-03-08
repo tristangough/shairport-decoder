@@ -24,7 +24,7 @@ class Processor(object):
 		temp_line = ""
 		while not (self.do_quit):
 			if os.path.exists(/tmp/shairport-sync-metadata) == False:
-				pass
+				print("/tmp/shairport-sync-metadata not yet created")
 			else:
 				with open(filename) as f:
 					for line in f:
