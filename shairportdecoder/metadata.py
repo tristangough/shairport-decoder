@@ -97,7 +97,7 @@ class Infos(object):
 
 	def write_cover_file(self):
 		temp_file = tempfile.NamedTemporaryFile(prefix="image_", suffix=".png", delete=False)
-		print(temp_file)
+		print("Temp file is:" + temp_file)
 		if temp_file == None:
 			pass
 		elif temp_file == "":
