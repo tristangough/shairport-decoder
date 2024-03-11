@@ -99,9 +99,9 @@ class Infos(object):
 		temp_file = tempfile.NamedTemporaryFile(prefix="image_", suffix=".png", delete=False)
 		print(temp_file)
 		if temp_file == None:
-			pass
+			print("None")
 		elif temp_file == "":
-			pass
+			print("Blank")
 		else:
 			with temp_file as file:
 				file.write(self.songcoverart.binary)  # this is not base64!
