@@ -98,14 +98,11 @@ class Infos(object):
 	def write_cover_file(self):
 		temp_file = tempfile.NamedTemporaryFile(prefix="image_", suffix=".png", delete=False)
 		print(temp_file)
-		if temp_file == None:
-			print("None")
-		elif temp_file == "":
-			print("Blank")
-		else:
-			with temp_file as file:
-				file.write(self.songcoverart.binary)  # this is not base64!
-			return temp_file
+		print(str(self.songcoverart.binary))
+		with temp_file as file:
+#			if not (self.songcoverart.binary)
+			file.write(self.songcoverart.binary)  # this is not base64!
+		return temp_file
 
 	def to_simple_string(self):
 		"""
