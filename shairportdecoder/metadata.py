@@ -100,10 +100,10 @@ class Infos(object):
 		print(temp_file)
 		print(str(self.songcoverart.binary))
 		with temp_file as file:
-			if self.songcoverart.binary == None:
-				pass
-			else:
-				file.write(self.songcoverart.binary)  # this is not base64!
+#			if self.songcoverart.binary == None:
+#				pass
+#			else:
+			file.write(self.songcoverart.binary)  # this is not base64!
 		return temp_file
 
 	def to_simple_string(self):
