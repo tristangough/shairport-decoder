@@ -50,6 +50,12 @@ class Processor(object):
 			elif item.code == "snam":  # -- daap.songalbum                     ******* ADDED FOR APPLE DEVICE NAME *******
 				self.info.appleclient = item.data_str
 				self._trigger_update_event(META)
+			elif item.code == "clip":  # -- the Airplay client has connected   ******* ADDED FOR CONNECTION *******
+				self.info.clip = item.data_bool
+				self._trigger_update_event(META_START)
+			elif item.code == "aend":  # -- exit active state                  ******* ADDED FOR CONNECTION *******
+				self.info.aend = item.data_bool
+				self._trigger_update_event(META_START)
 			elif item.code == "conn":  # -- daap.songalbum                     ******* ADDED FOR CONNECTION *******
 				self.info.connect = item.data_str
 				self._trigger_update_event(META_START)
