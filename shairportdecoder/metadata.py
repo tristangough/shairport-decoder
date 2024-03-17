@@ -30,6 +30,8 @@ class Infos(object):
 
 	def __init__(self):
 		self.appleclient = None				# unicode, e.g. "Tristan's iPhone"
+		self.clip = None				# unicode, IP number
+		self.aend = None				# unicode, IP number
 		self.connect = None				# unicode, IP number
 		self.disconnect = None				# unicode, IP number
 		self.itemid = None  				# int
@@ -126,6 +128,12 @@ class Infos(object):
 
 	def to_user(self):
 		return (self.appleclient if self.appleclient else "Apple device")
+
+	def to_clip(self):
+		return (True)
+
+	def to_aend(self):
+		return (False)
 
 	def to_connect(self):
 		return (self.connect)
