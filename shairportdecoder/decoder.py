@@ -61,7 +61,7 @@ class Processor(object):
 				self._trigger_update_event(META_START)
 			elif item.code == "abeg":  # -- test                               ******* ADDED FOR CONNECTION *******
 				self.info.abeg = item.data_str
-				self._trigger_update_event(META_START)
+				self._trigger_update_event(CLIENT_REMOTE_AVAILABLE)
 			elif item.code == "conn":  # -- daap.songalbum                     ******* ADDED FOR CONNECTION *******
 				self.info.connect = item.data_str
 				self._trigger_update_event(META_START)
