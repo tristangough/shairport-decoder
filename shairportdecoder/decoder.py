@@ -56,7 +56,7 @@ class Processor(object):
 				try:
 				    file='/home/kitchentv/Documents/airplay_user.txt' 
 				    with open(file, 'w') as filetowrite:
-				        filetowrite.write('connected')
+				        filetowrite.write(self.info.appleclient)
 				except OSError:
 				    pass				        
 			elif item.code == "disc":  # -- daap.songalbum                     ******* ADDED FOR DISCONNECTION *******
