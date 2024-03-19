@@ -50,14 +50,8 @@ class Processor(object):
 			elif item.code == "snam":  # -- daap.songalbum                     ******* ADDED FOR APPLE DEVICE NAME *******
 				self.info.appleclient = item.data_str
 				self._trigger_update_event(META)
-			elif item.code == "mdst":  # -- test                               ******* ADDED FOR CONNECTION *******
-				self.info.mdst = item.data_str
-				self._trigger_update_event(META_START)
 			elif item.code == "cdid":  # -- test                               ******* ADDED FOR CONNECTION *******
 				self.info.cdid = item.data_str
-				self._trigger_update_event(META_START)
-			elif item.code == "prgr":  # -- test                               ******* ADDED FOR CONNECTION *******
-				self.info.prgr = item.data_str
 				self._trigger_update_event(META_START)
 			elif item.code == "phbt":  # -- test                               ******* ADDED FOR CONNECTION *******
 				self.info.phbt = item.data_str
