@@ -30,8 +30,12 @@ class Infos(object):
 
 	def __init__(self):
 		self.appleclient = None				# unicode, e.g. "Tristan's iPhone"
-		self.clip = None				# unicode, IP number
-		self.aend = None				# unicode, IP number
+		self.mdst = None				# unicode, IP number
+		self.cdid = None				# unicode, IP number
+		self.prgr = None				# unicode, IP number
+		self.phbt = None				# unicode, IP number
+		self.styp = None				# unicode, IP number
+		self.abeg = None				# unicode, IP number
 		self.connect = None				# unicode, IP number
 		self.disconnect = None				# unicode, IP number
 		self.itemid = None  				# int
