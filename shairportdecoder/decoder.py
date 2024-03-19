@@ -50,30 +50,22 @@ class Processor(object):
 			elif item.code == "snam":  # -- daap.songalbum                     ******* ADDED FOR APPLE DEVICE NAME *******
 				self.info.appleclient = item.data_str
 				self._trigger_update_event(META)
-			elif item.code == "cdid":  # -- test                               ******* ADDED FOR CONNECTION *******
-				self.info.cdid = item.data_str
-				self._trigger_update_event(META_START)
-			elif item.code == "phbt":  # -- test                               ******* ADDED FOR CONNECTION *******
-				self.info.phbt = item.data_str
-				self._trigger_update_event(META_START)
-			elif item.code == "styp":  # -- test                               ******* ADDED FOR CONNECTION *******
-				self.info.styp = item.data_str
-				self._trigger_update_event(META_START)
-			elif item.code == "abeg":  # -- test                               ******* ADDED FOR CONNECTION *******
-				self.info.abeg = item.data_str
-				self._trigger_update_event(META_START)
 			elif item.code == "conn":  # -- daap.songalbum                     ******* ADDED FOR CONNECTION *******
 				self.info.connect = item.data_str
-				self._trigger_update_event(META_START)
 				try:
 				    file='/home/kitchentv/Documents/airplay_user.txt' 
 				    with open(file, 'w') as filetowrite:
-				        filetowrite.write('clipper')
+				        filetowrite.write('connected')
 				except OSError:
 				    pass				        
 			elif item.code == "disc":  # -- daap.songalbum                     ******* ADDED FOR DISCONNECTION *******
 				self.info.disconnect = item.data_str
-				self._trigger_update_event(META_START)
+				try:
+				    file='/home/kitchentv/Documents/airplay_user.txt' 
+				    with open(file, 'w') as filetowrite:
+				        filetowrite.write('disconnected')
+				except OSError:
+				    pass				        
 			elif item.code == "mdst":  # -- a sequence of metadata is about to start
 				self._trigger_update_event(META_START)
 				#
