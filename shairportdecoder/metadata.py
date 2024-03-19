@@ -30,7 +30,9 @@ class Infos(object):
 
 	def __init__(self):
 		self.appleclient = None				# unicode, e.g. "Tristan's iPhone"
+		self.mdst = None				# unicode, IP number
 		self.cdid = None				# unicode, IP number
+		self.prgr = None				# unicode, IP number
 		self.phbt = None				# unicode, IP number
 		self.styp = None				# unicode, IP number
 		self.abeg = None				# unicode, IP number
@@ -144,7 +146,7 @@ class Infos(object):
 		return (self.disconnect)
 
 	def to_test(self):
-		return (self.cdid) + (self.phbt) + (self.styp) + (self.abeg)
+		return (self.mdst) + (self.cdid) + (self.prgr) + (self.phbt) + (self.styp) + (self.abeg)
 
 class CoverArt(object):
 	def __init__(self, base64=None, binary=None, mime=None, extension=None, checksum=None):
