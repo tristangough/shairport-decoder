@@ -55,7 +55,7 @@ class Processor(object):
 				self._trigger_update_event(META_START)
 			elif item.code == "aend":  # -- exit active state                  ******* ADDED FOR CONNECTION *******
 				self.info.aend = item.data_bool
-				self._trigger_update_event(META)
+				self._trigger_update_event(META_START)
 			elif item.code == "conn":  # -- daap.songalbum                     ******* ADDED FOR CONNECTION *******
 				self.info.connect = item.data_str
 				self._trigger_update_event(META_START)
