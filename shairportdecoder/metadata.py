@@ -144,7 +144,7 @@ class Infos(object):
 		return (self.disconnect)
 
 	def to_test(self):
-		return (self.phbt) + (self.styp) + (self.abeg)
+		return (self.abeg)
 
 class CoverArt(object):
 	def __init__(self, base64=None, binary=None, mime=None, extension=None, checksum=None):
