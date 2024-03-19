@@ -50,11 +50,23 @@ class Processor(object):
 			elif item.code == "snam":  # -- daap.songalbum                     ******* ADDED FOR APPLE DEVICE NAME *******
 				self.info.appleclient = item.data_str
 				self._trigger_update_event(META)
-			elif item.code == "clip":  # -- the Airplay client has connected   ******* ADDED FOR CONNECTION *******
-				self.info.clip = item.data_bool
+			elif item.code == "mdst":  # -- test                               ******* ADDED FOR CONNECTION *******
+				self.info.mdst = item.data_str
 				self._trigger_update_event(META_START)
-			elif item.code == "aend":  # -- exit active state                  ******* ADDED FOR CONNECTION *******
-				self.info.aend = item.data_bool
+			elif item.code == "cdid":  # -- test                               ******* ADDED FOR CONNECTION *******
+				self.info.cdid = item.data_str
+				self._trigger_update_event(META_START)
+			elif item.code == "prgr":  # -- test                               ******* ADDED FOR CONNECTION *******
+				self.info.prgr = item.data_str
+				self._trigger_update_event(META_START)
+			elif item.code == "phbt":  # -- test                               ******* ADDED FOR CONNECTION *******
+				self.info.phbt = item.data_str
+				self._trigger_update_event(META_START)
+			elif item.code == "styp":  # -- test                               ******* ADDED FOR CONNECTION *******
+				self.info.styp = item.data_str
+				self._trigger_update_event(META_START)
+			elif item.code == "abeg":  # -- test                               ******* ADDED FOR CONNECTION *******
+				self.info.abeg = item.data_str
 				self._trigger_update_event(META_START)
 			elif item.code == "conn":  # -- daap.songalbum                     ******* ADDED FOR CONNECTION *******
 				self.info.connect = item.data_str
