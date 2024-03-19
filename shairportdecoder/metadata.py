@@ -30,12 +30,6 @@ class Infos(object):
 
 	def __init__(self):
 		self.appleclient = None				# unicode, e.g. "Tristan's iPhone"
-		self.mdst = None				# unicode, IP number
-		self.cdid = None				# unicode, IP number
-		self.prgr = None				# unicode, IP number
-		self.phbt = None				# unicode, IP number
-		self.styp = None				# unicode, IP number
-		self.abeg = None				# unicode, IP number
 		self.connect = None				# unicode, IP number
 		self.disconnect = None				# unicode, IP number
 		self.itemid = None  				# int
@@ -132,21 +126,6 @@ class Infos(object):
 
 	def to_user(self):
 		return (self.appleclient if self.appleclient else "Apple device")
-
-	def to_clip(self):
-		return (True)
-
-	def to_aend(self):
-		return (False)
-
-	def to_connect(self):
-		return (self.connect)
-
-	def to_disconnect(self):
-		return (self.disconnect)
-
-	def to_test(self):
-		return (self.mdst) + (self.prgr)
 
 class CoverArt(object):
 	def __init__(self, base64=None, binary=None, mime=None, extension=None, checksum=None):
