@@ -54,7 +54,7 @@ class Processor(object):
 				self.info.connect = item.data_str
 				self._trigger_update_event(META_START)
 				try:
-				    file='/home/kitchentv/Documents/airplay_user.txt' 
+				    file='/home/kitchentv/airplay_user.txt' 
 				    with open(file, 'w') as filetowrite:
 				        filetowrite.write(self.info.appleclient)
 				except OSError:
@@ -63,7 +63,7 @@ class Processor(object):
 				self.info.disconnect = item.data_str
 				self._trigger_update_event(META_START)
 				try:
-				    file='/home/kitchentv/Documents/airplay_user.txt' 
+				    file='/home/kitchentv/airplay_user.txt' 
 				    with open(file, 'w') as filetowrite:
 				        filetowrite.write('disconnected')
 				except OSError:
