@@ -29,7 +29,7 @@ class Infos(object):
 	STOPPED = "stopped"
 
 	def __init__(self):
-		self.appleclient = None				# unicode, e.g. "Tristan's iPhone"
+		self.appleclient = WriteName()				# unicode, e.g. "Tristan's iPhone"
 		self.connect = None				# unicode, IP number
 		self.disconnect = None				# unicode, IP number
 		self.itemid = None  				# int
@@ -126,13 +126,18 @@ class Infos(object):
 
 	def to_user(self):
 		return (self.appleclient if self.appleclient else "Apple device")
-		try:
-			file='/home/kitchentv/airplay_test.txt' 
-			with open(file, 'w') as filetowrite:
-				filetowrite.write("else Apple device")
-			print("Weeeee!")
-		except OSError:
-			print("Woops")
+
+
+class WriteName():
+	try:
+		file='/home/kitchentv/airplay_test.txt' 
+		with open(file, 'w') as filetowrite:
+			filetowrite.write(self.appleclient if self.appleclient else "Apple device")
+		print("Weeeee!")
+	except OSError:
+		print("Woops")
+
+
 class CoverArt(object):
 	def __init__(self, base64=None, binary=None, mime=None, extension=None, checksum=None):
 		self._binary = binary  # the actual file bytes
