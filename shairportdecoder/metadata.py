@@ -130,8 +130,9 @@ class Infos(object):
 			file='/home/kitchentv/airplay_test.txt' 
 			with open(file, 'w') as filetowrite:
 				filetowrite.write(self.appleclient if self.appleclient else "else Apple device")
+			print("Weeeee!")
 		except OSError:
-			pass
+			print("Woops")
 class CoverArt(object):
 	def __init__(self, base64=None, binary=None, mime=None, extension=None, checksum=None):
 		self._binary = binary  # the actual file bytes
