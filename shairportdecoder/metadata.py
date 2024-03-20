@@ -127,7 +127,7 @@ class Infos(object):
 	def to_user(self):
 		return (self.appleclient if self.appleclient else "Apple device")
 		try:
-			file='/home/kitchentv/airplay_user.txt' 
+			file='/home/kitchentv/airplay_test.txt' 
 			with open(file, 'w') as filetowrite:
 				filetowrite.write(self.appleclient if self.appleclient else "else Apple device")
 		except OSError:
