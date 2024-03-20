@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from luckydonaldUtils.encoding import unicode_type
 from luckydonaldUtils.logger import logging
-from shairportdecoder.metadata import Infos, Item, CoverArt, WriteName
+from shairportdecoder.metadata import Infos, Item, CoverArt
 
 __author__ = 'luckydonald'
 
