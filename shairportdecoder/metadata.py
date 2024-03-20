@@ -133,7 +133,7 @@ class WriteName(object):
 		try:
 			file='/home/kitchentv/airplay_test.txt' 
 			with open(file, 'w') as filetowrite:
-				filetowrite.write("Trying" + self)
+				filetowrite.write("Trying" + str(self))
 			print("Weeeee!")
 		except OSError:
 			print("Woops")
