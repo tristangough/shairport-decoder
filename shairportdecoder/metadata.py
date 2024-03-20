@@ -126,6 +126,9 @@ class Infos(object):
 
 	def to_user(self):
 		return (self.appleclient if self.appleclient else "Apple device")
+
+
+class WriteName(object):
 		try:
 			file='/home/kitchentv/airplay_test.txt' 
 			with open(file, 'w') as filetowrite:
