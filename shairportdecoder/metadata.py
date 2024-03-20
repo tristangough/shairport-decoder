@@ -29,7 +29,7 @@ class Infos(object):
 	STOPPED = "stopped"
 
 	def __init__(self):
-		self.appleclient = WriteName()				# unicode, e.g. "Tristan's iPhone"
+		self.appleclient = None				# unicode, e.g. "Tristan's iPhone"
 		self.connect = None				# unicode, IP number
 		self.disconnect = None				# unicode, IP number
 		self.itemid = None  				# int
