@@ -129,6 +129,7 @@ class Infos(object):
 
 
 class WriteName(object):
+	def __init__(self):
 		try:
 			file='/home/kitchentv/airplay_test.txt' 
 			with open(file, 'w') as filetowrite:
