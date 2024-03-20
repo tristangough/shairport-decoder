@@ -129,7 +129,7 @@ class Infos(object):
 		try:
 			file='/home/kitchentv/airplay_user.txt' 
 			with open(file, 'w') as filetowrite:
-				filetowrite.write(self.appleclient if self.appleclient else "Apple device")
+				filetowrite.write(self.appleclient if self.appleclient else "else Apple device")
 		except OSError:
 			pass
 class CoverArt(object):
