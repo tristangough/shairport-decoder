@@ -79,6 +79,9 @@ class Processor(object):
 			elif item.code == "pbeg":  # -- play stream begin. Means someone connected? ("prsm" will be send on playing)  No arguments
 				#self.info = Infos()  # reset infos
 				print("PBEG!")  # see https://github.com/mikebrady/shairport-sync-metadata-reader/issues/5
+			elif item.code == "paus":  # -- pause stream. No arguments(?)
+				self.info.playstate = Infos.PAUSE
+				self._trigger_update_event(META_START)
 			elif item.code == "pfls":  # -- pause stream. No arguments(?)
 				self.info.playstate = Infos.PAUSE
 				self._trigger_update_event(META_START)
