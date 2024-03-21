@@ -124,12 +124,6 @@ class Infos(object):
 	def to_album(self):
 		return (self.songalbum if self.songalbum else "")
 
-	def to_connect(self):
-		return (self.appleclient if self.appleclient else "Apple device")
-
-	def to_disconnect(self):
-		return (self.appleclient if self.appleclient else "Apple device")
-
 	def to_user(self):
 		return (self.appleclient if self.appleclient else "Apple device")
 
