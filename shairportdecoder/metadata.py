@@ -26,7 +26,6 @@ import magic
 class Infos(object):
 	PLAYING = "playing"
 	PAUSE = "paused"
-	PAUSE2 = "pause2"
 	STOPPED = "stopped"
 
 	def __init__(self):
@@ -133,9 +132,6 @@ class Infos(object):
 
 	def to_user(self):
 		return (self.appleclient if self.appleclient else "Apple device")
-
-	def to_state(self):
-		return (self.playstate if self.playstate else "Playstate unknown")
 
 
 class WriteName(object):
