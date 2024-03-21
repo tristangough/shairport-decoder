@@ -133,6 +133,9 @@ class Infos(object):
 	def to_user(self):
 		return (self.appleclient if self.appleclient else "Apple device")
 
+	def to_state(self):
+		return (self.playstate if self.playstate else "Unknown state")
+
 
 class WriteName(object):
 	def __init__(self):
