@@ -32,7 +32,6 @@ class Infos(object):
 		self.appleclient = None				# unicode, e.g. "Tristan's iPhone"
 		self.connect = None				# unicode, IP number
 		self.disconnect = None				# unicode, IP number
-		self.pause = None				# unicode, IP number
 		self.itemid = None  				# int
 		self.itemkind = None  				# int, so far only '2' has been seen, audio.
 		self.itemname = None  				# unicode, the actual song title, e.g. "Chapter 9"  -- Yes, I am using an audiobook to test. lol.
@@ -136,9 +135,6 @@ class Infos(object):
 
 	def to_state(self):
 		return (self.playstate if self.playstate else "Playstate unknown")
-
-	def to_pause(self):
-		return (self.pause if self.pause else "Pause test")
 
 
 class WriteName(object):
