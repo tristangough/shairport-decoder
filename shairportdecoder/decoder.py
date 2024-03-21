@@ -81,10 +81,13 @@ class Processor(object):
 				print("PBEG!")  # see https://github.com/mikebrady/shairport-sync-metadata-reader/issues/5
 			elif item.code == "pfls":  # -- pause stream. No arguments(?)
 				self.info.playstate = Infos.PAUSE
+				self._trigger_update_event(META_START)
 			elif item.code == "prsm":  # -- play stream start/resume. No arguments
 				self.info.playstate = Infos.PLAYING
+				self._trigger_update_event(META_START)
 			elif item.code == "pend":  # -- play stream end. No arguments
 				self.info.playstate = Infos.STOPPED
+				self._trigger_update_event(META_START)
 			elif item.code == "pvol":  # -- play volume. The volume is sent as a string
 				# "airplay_volume,volume,lowest_volume,highest_volume",
 				# where "volume", "lowest_volume" and "highest_volume" are given in dB.
