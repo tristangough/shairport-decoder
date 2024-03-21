@@ -26,6 +26,7 @@ import magic
 class Infos(object):
 	PLAYING = "playing"
 	PAUSE = "paused"
+	PAUSE2 = "pause2"
 	STOPPED = "stopped"
 
 	def __init__(self):
