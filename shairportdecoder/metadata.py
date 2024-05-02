@@ -106,14 +106,14 @@ class Infos(object):
 				file.write(self.songcoverart.binary)  # this is not base64!
 		return temp_file
 
-	def to_simple_string(self):
+	def to_file(self):
 		"""
 		String like
-		"[title] - [artist]\n[album]"
+		"[title]\n[artist]\n[album]\n"
 		will be returned.
 		:return:
 		"""
-		return (self.itemname if self.itemname else "Unknown Track") + ((" - " + self.songartist) if self.songartist else "") + (("\n" + self.songalbum) if self.songalbum else "")
+		return ((self.itemname + "\n") if self.itemname else "\n") + ((self.songartist + "\n") if self.songartist else "\n") + ((self.songalbum + "\n") if self.songalbum else "\n")
 
 	def to_title(self):
 		return (self.itemname if self.itemname else "")
